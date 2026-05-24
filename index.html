@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Scan</title>
+
+<style>
+body {
+  margin: 0;
+  background: black;
+  color: #00ffcc;
+  font-family: monospace;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.box {
+  max-width: 500px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+.bar {
+  width: 80%;
+  height: 10px;
+  background: #222;
+  margin: 30px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: #00ffcc;
+  animation: load 6s forwards;
+}
+
+@keyframes load {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+#final {
+  display: none;
+  color: white;
+  margin-top: 30px;
+  font-size: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>Scanning visitor device... 🔍</h1>
+<p>Checking system files...</p>
+
+<div class="bar">
+  <div class="progress"></div>
+</div>
+
+<p>Analyzing behavior...</p>
+
+<div id="final">
+👌 Random NPC detected
+</div>
+
+</div>
+
+<script>
+setTimeout(() => {
+  document.getElementById("final").style.display = "block";
+}, 6000);
+</script>
+
+</body>
+</html>
